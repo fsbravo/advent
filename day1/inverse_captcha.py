@@ -58,3 +58,4 @@ def solve_inverse_captcha_2(captcha):
         sol += int(c) if c == captcha[(i + n/2) % n] else 0
 
     return sol
+
