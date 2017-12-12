@@ -45,3 +45,10 @@ def find_loop_2(blocks):
         if test == memory[j]:
             break
     return i - j
+
+
+if __name__ == "__main__":
+    with open('input.txt', 'r') as fin:
+        data = fin.read()
+    print 'Answer 1 {}'.format(find_loop(data))
+    print 'Answer 2 {}'.format(find_loop_2(data))

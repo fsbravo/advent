@@ -74,3 +74,8 @@ def is_anagram(w1, w2):
         d[c1] += 1
         d[c2] -= 1
     return not np.any([v != 0 for v in d.values()])
+
+
+if __name__ == "__main__":
+    print 'Answer 1: {}'.format(count_valid('input.txt'))
+    print 'Answer 2: {}'.format(count_valid_2('input.txt'))

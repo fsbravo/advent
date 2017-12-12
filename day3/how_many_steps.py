@@ -72,5 +72,11 @@ def how_many_steps_2(num):
                 direction = 0
         m[tmp[0], tmp[1]] = np.sum(m[tmp[0]-1:tmp[0]+2, tmp[1]-1:tmp[1]+2])
         if m[tmp[0], tmp[1]] > num:
-            return m[tmp[0], tmp[1]]
+            return int(m[tmp[0], tmp[1]])
         pos = tmp
+
+
+if __name__ == "__main__":
+    num = 347991
+    print 'Answer 1: {}'.format(how_many_steps(num))
+    print 'Answer 2: {}'.format(how_many_steps_2(num))

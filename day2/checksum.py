@@ -58,3 +58,10 @@ def line_check(l):
                 continue
             if v1 % v2 == 0:
                 return v1/v2
+
+
+if __name__ == "__main__":
+    with open('input.txt', 'r') as fin:
+        data = fin.read()
+    print 'Answer 1: {}'.format(checksum(data))
+    print 'Answer 2: {}'.format(checksum_2(data))

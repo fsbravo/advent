@@ -1,5 +1,6 @@
 import re
 
+
 class SimpleNode(object):
 
     def __init__(self, name, weight, children):
@@ -30,9 +31,6 @@ class SimpleTree(object):
             children_weights = [self.find_weight(c) for c in
                                 node.children]
             mode = max(children_weights, key=children_weights.count)
-            print node.name
-            print mode
-            print children_weights
             inconsistent = False
             for i, w in enumerate(children_weights):
                 if w != mode:
@@ -44,7 +42,6 @@ class SimpleTree(object):
             if not inconsistent:
                 # calculate required difference
                 return node.weight - difference
-
 
     def find_weight(self, n):
         node = self.nodes[n]
@@ -87,3 +84,8 @@ def retrieve_data(infile):
                 rest = []
             data.append((name, weight, rest))
     return data
+
+
+if __name__ == "__main__":
+    print 'Answer 1: {}'.format(find_bottom('input.txt'))
+    print 'Answer 2: {}'.format(find_wrong_weight('input.txt'))

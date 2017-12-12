@@ -59,3 +59,9 @@ def solve_inverse_captcha_2(captcha):
 
     return sol
 
+
+if __name__ == "__main__":
+    with open('input.txt', 'r') as fin:
+        data = fin.read()
+    print 'Answer 1: {}'.format(solve_inverse_captcha(data))
+    print 'Answer 2: {}'.format(solve_inverse_captcha_2(data))

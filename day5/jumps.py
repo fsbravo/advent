@@ -47,3 +47,8 @@ def update_position_2(jumps, pos):
         jumps[pos] += 1
     pos += mv
     return jumps, pos
+
+
+if __name__ == "__main__":
+    print 'Answer 1: {}'.format(jump('input.txt'))
+    print 'Answer 2: {}'.format(jump_2('input.txt'))
